@@ -1,0 +1,95 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebApplication1.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+   
+    <style type="text/css">
+        .tbl_style {
+            
+            display: inline-block;
+            text-align:center;
+            width: inherit;
+           
+        }
+      
+        .btnStyle{
+            border: 1px solid;
+            background-color: darkred;
+            width: 90px;
+            height: 40px;
+            border-radius: 15px;
+            -webkit-border-radius: 15px;
+            -moz-border-radius: 15px;
+            margin: 7px;
+            text-align: center;
+            font-family:'Century Gothic';
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            float:left;
+            margin-left: 50px;
+            
+        }
+        .btnStyle:hover {
+            background-color: lightsalmon;
+         }
+        .form1 {
+            text-align:center;
+            margin: auto;
+            font-family:'Century Gothic';        
+        }
+        .row1 {
+            background-color: beige;
+            text-align: center;
+            width: 1500px;
+            
+        }
+        .lblstyle {
+            font-weight: bold;
+            background-color: beige;
+            border-radius: 24px;
+            font-size: 14px;
+
+        }
+        body {
+            background-image: url('/images/art-bicycles-bikes.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100%;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server" class="form1">
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+            <table class="tbl_style">
+                <tr>
+                    <td class="row1">
+                        <asp:Button ID="ButtonHome" runat="server" Text="Home" CssClass="btnStyle" OnClick="ButtonHome_Click" />                    
+                        <asp:Button ID="ButtonStore" runat="server" Text="Store" CssClass="btnStyle" OnClick="ButtonStore_Click" />
+                                                           
+                        <asp:Button ID="ButtonAboutUs" runat="server" Text="About Us" CssClass="btnStyle" OnClick="ButtonAboutUs_Click" />
+                        <asp:Button ID="ButtonLogout" runat="server" Text="Log Out" CssClass="btnStyle" style="float:right" OnClick="ButtonLogout_Click" />
+                        <asp:Button ID="ButtonLogin" runat="server" Text="Login" CssClass="btnStyle" style="float:right; margin-right:50px;" OnClick="ButtonLogin_Click" />
+                        
+ 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                         <asp:Label ID="lb_logged_user" class="lblstyle" runat="server" style="float:right; width:70px;"></asp:Label>
+                    </td>
+                </tr>
+            </table>
+            <asp:ContentPlaceHolder ID="head" runat="server">
+            </asp:ContentPlaceHolder>
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
